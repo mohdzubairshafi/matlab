@@ -1,0 +1,44 @@
+clc;
+clear;
+t=-5:0.1:5;
+f = 1;
+a=sin(2*pi*f*t);
+b=cos(2*pi*f*t);
+x=t;
+y=(t==0);
+z=(t>=0);
+c=exp(t);
+subplot(3,2,1);
+plot(t,a);
+axis([0 5 -1 1]);
+xlabel('time');
+ylabel('Amplitude');
+title('Sine Wave');
+subplot(3,2,2);
+plot(t,b);
+axis([0 5 -1 1]);
+xlabel('time');
+ylabel('Amplitude');
+title('Cosine Wave');
+subplot(3,2,3);
+plot(t, x);
+axis([0 5 0 5]);
+xlabel('time');
+ylabel('Amplitude');
+title('Unit Ramp Signal')
+subplot(3,2,4);
+plot(t,c);
+xlabel('time');
+ylabel('Amplitude')
+title('Exponential Signal')
+subplot(3,2,5);
+plot(t,y);
+xlabel('time');
+ylabel('Amplitude');
+title('Unit Impulse Signal');
+subplot(3,2,6);
+plot(t,z);
+axis([-1 5 -1 2]);
+xlabel('time');
+ylabel('Amplitude');
+title('Unit Step Signal');
